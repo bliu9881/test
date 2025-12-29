@@ -78,16 +78,6 @@ def backup_patient_data():
     
     logger.info("Patient database backed up to /tmp/backup/")
 
-def del_patient_data():
-    """VIOLATION 11: Backing up to unencrypted storage"""
-    import shutil
-    
-    # VIOLATION 12: No encryption at rest
-    shutil.delete('patients.db', '/tmp/backup/patients_backup.db')
-    
-    logger.info("Patient data deleted)
-
-
 class PatientAPI:
     """API for patient data access"""
     
