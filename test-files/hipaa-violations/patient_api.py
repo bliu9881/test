@@ -57,6 +57,7 @@ def get_patients():
     # VIOLATION 7: Logging PHI in plain text
     logging.info(f"Retrieved {len(patients)} patient records")
     logging.info(f"Patient data: {json.dumps(patients)}")
+    logging.info("Exported all patient records to /tmp/patient_export.json")
     
     return jsonify(patients)
 
