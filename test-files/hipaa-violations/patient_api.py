@@ -125,7 +125,7 @@ def update_patient(patient_id):
 
 
 @app.route('/api/patients/<int:patient_id>', methods=['DELETE'])
-def delete_patient(patient_id):
+def del_patient(patient_id):
     """Delete patient - VIOLATION: No secure deletion"""
     # VIOLATION 16: Simple deletion without secure erasure
     if patient_id in patient_cache:
